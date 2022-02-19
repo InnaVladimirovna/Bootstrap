@@ -1,0 +1,14 @@
+.bg-danger{
+    background: rgb(0, 255, 191);
+}
+body .table{
+    width: 50%;
+    margin: 0 auto;
+}
+form{
+    margin: 0 auto;
+    width: 50%;
+}
+input{
+    margin: 20px;
+}

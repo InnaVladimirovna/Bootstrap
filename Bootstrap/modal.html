@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <a class="btn btn-primary " data-toggle="modal" data-target="#modal1" id="hello" href="">modal icon</a>
+    <div class="modal fade" id="modal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Form Autorithation</h2>
+                        <button type="button" class="close" data-dismiss="modal">X</button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="input-group">
+                <input type="text" placeholder="login" name="login" class="form-control" id="login">
+                <span class="input-group-addon">@</span>
+                </div>
+                <input type="password" placeholder="password" class="form-control">
+                <input type="submit" value="avtorization" class="btn btn-danger">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width:40px">$</span>
+                    <input type="text" class="form-control" placeholder="Ваша Зарплата">
+                    <span class="input-group-addon">.00</span>
+                    <div class="input-group">
+                        <input type="text" placeholder="Ваше имя" class="form-control">
+                        <span class="input-group-addon"><i class="fa fa-spinner fa-spin"></i></span>
+                    </div>
+                    <small id="pass" class="form-text form-muted">Пароль не меньше 10 символов</small>
+                </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-pimary">SAVE</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#modal1').on('show.bs.modal', function(e) {
+                var $modal = $(this),
+                esseyId = e.relatedTarget.id;
+    document.getElementById('login').value=esseyId;
+        })
+    </script>
+</body>
+</html>
